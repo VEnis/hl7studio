@@ -27,6 +27,8 @@
           <element id="archive" name="integration-1.0.0.BUILD-SNAPSHOT.jar">
             <element id="module-output" name="integration" />
           </element>
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.3.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.3.3.RELEASE" />
           <element id="archive" name="service.api-1.0.0.BUILD-SNAPSHOT.jar">
             <element id="module-output" name="service.api" />
           </element>
@@ -47,11 +49,9 @@
           <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.9" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.3.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.3.3.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.3.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.3.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jpa:1.10.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-orm:4.3.3.RELEASE" />
-          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.3.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:1.12.3.RELEASE" />
           <element id="library" level="project" name="Maven: org.eclipse.persistence:javax.persistence:2.1.1" />
           <element id="library" level="project" name="Maven: javax.validation:validation-api:1.1.0.Final" />
