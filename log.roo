@@ -1,0 +1,3 @@
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2017-04-23 14:07:17
+hint
+project setup --topLevelPackage io.github.venis.hl7studio --projectName hl7studio --multimodule STANDARD --java 8
