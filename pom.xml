@@ -24,6 +24,8 @@
     <asciidoclet.version>1.5.4</asciidoclet.version>
     <spring-boot.version>1.4.1.RELEASE</spring-boot.version>
   <java.version>1.8</java.version>
+  <start-class>io.github.venis.hl7studio.Hl7studioApplication</start-class>
+    <springlets.version>1.2.0.RC1</springlets.version>
     </properties>
 
   <modules>
@@ -91,6 +93,16 @@
                 <groupId>io.github.venis.hl7studio</groupId>
                 <artifactId>service.impl</artifactId>
                 <version>${project.version}</version>
+            </dependency>
+        <dependency>
+                <groupId>io.springlets</groupId>
+                <artifactId>springlets-data-jpa</artifactId>
+                <version>${springlets.version}</version>
+            </dependency>
+        <dependency>
+                <groupId>io.springlets</groupId>
+                <artifactId>springlets-data-commons</artifactId>
+                <version>${springlets.version}</version>
             </dependency>
         </dependencies>
   </dependencyManagement>
