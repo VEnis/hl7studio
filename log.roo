@@ -12,3 +12,26 @@ metadata status
 system properties
 help
 hint
+module focus --moduleName model 
+entity jpa --class ~.Hl7Message
+// [failed] entity jpa --class ~.Hl7Message
+// [failed] entity jpa --class ~.Hl7Message --entityFormatExpression "{#title}"
+entity jpa --class ~.Hl7Message --entityFormatExpression "{#title}" --force 
+entity jpa --class ~.Hl7Message --entityFormatExpression "{#title}" --force
+field string --fieldName title --notNull --sizeMax 200 --comment "Hl7 message title that describes typical purpose of the message"
+field string --fieldName raw --notNull --sizeMax 1048576 --comment "Raw Hl7 message in txt ER7 format"
+field string --fieldName hl7SendingApplication --comment "Sending Application"
+field string --fieldName hl7SendingFacility --comment "Sending Facility"
+field string --fieldName hl7ReceivingApplication --comment "Receiving Application"
+field string --fieldName hl7ReceivingFacility --comment "Receiving Facility"
+field date --fieldName hl7DateTimeOfMessage --type java.util.Date --comment "Date/Time Of Message" --dateFormat MEDIUM --timeFormat MEDIUM 
+field string --fieldName hl7MessageType --comment "Message Type"
+field string --fieldName hl7TriggerEvent --comment "Trigger Event"
+field string --fieldName hl7ControlId --comment "Message Control ID"
+field string --fieldName hl7ProcessingId --comment "Processing ID"
+field string --fieldName hl7VersionId --comment "Version ID"
+enum type --class ~.Hl7MessageEncoding
+enum constant --name ER7
+enum constant --name XML
+focus --class ~.Hl7Message
+field date --fieldName hl7DateTimeOfMessage --type java.util.Date --comment "Date/Time Of Message" --dateFormat MEDIUM --timeFormat MEDIUM --persistenceType JPA_TIMESTAMP --force 

@@ -104,6 +104,11 @@
                 <artifactId>springlets-data-commons</artifactId>
                 <version>${springlets.version}</version>
             </dependency>
+        <dependency>
+                <groupId>io.springlets</groupId>
+                <artifactId>springlets-context</artifactId>
+                <version>${springlets.version}</version>
+            </dependency>
         </dependencies>
   </dependencyManagement>
 
