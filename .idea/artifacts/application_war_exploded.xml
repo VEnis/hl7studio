@@ -1,0 +1,73 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="application:war exploded">
+    <output-path>$PROJECT_DIR$/application/target/application-1.0.0.BUILD-SNAPSHOT</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="application" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjrt:1.8.9" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.4" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter:1.4.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot:1.4.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-context:4.3.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-expression:4.3.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-autoconfigure:1.4.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-logging:1.4.1.RELEASE" />
+          <element id="library" level="project" name="Maven: ch.qos.logback:logback-classic:1.1.7" />
+          <element id="library" level="project" name="Maven: ch.qos.logback:logback-core:1.1.7" />
+          <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.21" />
+          <element id="library" level="project" name="Maven: org.slf4j:jul-to-slf4j:1.7.21" />
+          <element id="library" level="project" name="Maven: org.slf4j:log4j-over-slf4j:1.7.21" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-core:4.3.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.17" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.21" />
+          <element id="archive" name="service.impl-1.0.0.BUILD-SNAPSHOT.jar">
+            <element id="module-output" name="service.impl" />
+          </element>
+          <element id="archive" name="integration-1.0.0.BUILD-SNAPSHOT.jar">
+            <element id="module-output" name="integration" />
+          </element>
+          <element id="archive" name="service.api-1.0.0.BUILD-SNAPSHOT.jar">
+            <element id="module-output" name="service.api" />
+          </element>
+          <element id="archive" name="repository-1.0.0.BUILD-SNAPSHOT.jar">
+            <element id="module-output" name="repository" />
+          </element>
+          <element id="archive" name="model-1.0.0.BUILD-SNAPSHOT.jar">
+            <element id="module-output" name="model" />
+          </element>
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-data-jpa:1.4.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-aop:1.4.1.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.3.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.9" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:5.0.11.Final" />
+          <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.3.0.Final" />
+          <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" />
+          <element id="library" level="project" name="Maven: org.javassist:javassist:3.20.0-GA" />
+          <element id="library" level="project" name="Maven: antlr:antlr:2.7.7" />
+          <element id="library" level="project" name="Maven: org.jboss:jandex:2.0.0.Final" />
+          <element id="library" level="project" name="Maven: dom4j:dom4j:1.6.1" />
+          <element id="library" level="project" name="Maven: xml-apis:xml-apis:1.4.01" />
+          <element id="library" level="project" name="Maven: org.hibernate.common:hibernate-commons-annotations:5.0.1.Final" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-entitymanager:5.0.11.Final" />
+          <element id="library" level="project" name="Maven: javax.transaction:javax.transaction-api:1.2" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-jpa:1.10.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.data:spring-data-commons:1.12.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-orm:4.3.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-tx:4.3.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.3.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-aspects:4.3.3.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-jdbc:4.3.3.RELEASE" />
+          <element id="library" level="project" name="Maven: io.springlets:springlets-data-jpa:1.2.0.RC1" />
+          <element id="library" level="project" name="Maven: io.springlets:springlets-data-commons:1.2.0.RC1" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/application/target/application-1.0.0.BUILD-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="application/web/Web" />
+    </root>
+  </artifact>
+</component>

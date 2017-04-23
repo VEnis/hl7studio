@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/application/application.iml" filepath="$PROJECT_DIR$/application/application.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hl7studio.iml" filepath="$PROJECT_DIR$/hl7studio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/integration/integration.iml" filepath="$PROJECT_DIR$/integration/integration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/model/model.iml" filepath="$PROJECT_DIR$/model/model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/repository/repository.iml" filepath="$PROJECT_DIR$/repository/repository.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-api/service.api.iml" filepath="$PROJECT_DIR$/service-api/service.api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/service-impl/service.impl.iml" filepath="$PROJECT_DIR$/service-impl/service.impl.iml" />
+    </modules>
+  </component>
+</project>
