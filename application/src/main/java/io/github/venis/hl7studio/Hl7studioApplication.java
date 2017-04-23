@@ -6,14 +6,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * = Hl7studioApplication
  *
- * TODO Auto-generated class documentation
+ * Main application class
  *
  */
 @SpringBootApplication
 public class Hl7studioApplication {
 
     /**
-     * TODO Auto-generated method documentation
+     * Main application method
      *
      * @param args
      */
@@ -21,3 +21,4 @@ public class Hl7studioApplication {
         SpringApplication.run(Hl7studioApplication.class, args);
     }
 }
+
