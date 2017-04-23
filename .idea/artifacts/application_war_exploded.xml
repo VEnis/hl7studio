@@ -33,6 +33,12 @@
           <element id="archive" name="repository-1.0.0.BUILD-SNAPSHOT.jar">
             <element id="module-output" name="repository" />
           </element>
+          <element id="library" level="project" name="Maven: com.querydsl:querydsl-jpa:4.1.4" />
+          <element id="library" level="project" name="Maven: com.querydsl:querydsl-core:4.1.4" />
+          <element id="library" level="project" name="Maven: com.google.guava:guava:17.0" />
+          <element id="library" level="project" name="Maven: com.google.code.findbugs:jsr305:3.0.1" />
+          <element id="library" level="project" name="Maven: com.mysema.commons:mysema-commons-lang:0.2.4" />
+          <element id="library" level="project" name="Maven: com.infradna.tool:bridge-method-annotation:1.13" />
           <element id="archive" name="model-1.0.0.BUILD-SNAPSHOT.jar">
             <element id="module-output" name="model" />
           </element>

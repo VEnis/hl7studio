@@ -61,3 +61,4 @@ entity jpa --class ~.Hl7ConnectorSinglePortMllpReceiver --extends ~.Hl7Connector
 entity jpa --class ~.Hl7ConnectorSinglePortMllpSender --extends ~.Hl7ConnectorSinglePortMllp
 entity jpa --class ~.Hl7ConnectorDualPortMllpReceiver --extends ~.Hl7ConnectorDualPortMllp
 entity jpa --class ~.Hl7ConnectorDualPortMllpSender --extends ~.Hl7ConnectorDualPortMllp
+repository jpa --all 
