@@ -35,3 +35,29 @@ enum constant --name ER7
 enum constant --name XML
 focus --class ~.Hl7Message
 field date --fieldName hl7DateTimeOfMessage --type java.util.Date --comment "Date/Time Of Message" --dateFormat MEDIUM --timeFormat MEDIUM --persistenceType JPA_TIMESTAMP --force 
+entity jpa --class ~.Hl7Connector --abstract --inheritanceType SINGLE_TABLE 
+field string --fieldName title --comment "Connector title"
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2017-04-23 22:48:51
+module focus --moduleName model 
+focus --class ~.Hl7Connector
+field enum --fieldName encoding --type ~.Hl7MessageEncoding --enumType STRING --notNull --comment "Message encoding"
+enum type --class ~.Hl7ConnectorCharset
+enum constant --name "UTF8"
+enum constant --name "ISO88591"
+focus --class ~.Hl7Connector
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2017-04-23 22:59:28
+module focus --moduleName model
+focus --class ~.Hl7Connector
+field enum --fieldName charset --type ~.Hl7ConnectorCharset --enumType ORDINAL --comment "Connection charset"
+field string --fieldName host --notNull --comment "Host"
+field boolean --fieldName useTlsSsl --notNull --comment "Use TLS/SSL"
+field boolean --fieldName detectCharsetFromMessage --notNull --comment "Detect encoding from MSH-18"
+entity jpa --class ~.Hl7ConnectorSinglePortMllp --abstract --extends ~.Hl7Connector
+field number --fieldName port --type int --notNull --comment "Port"
+entity jpa --class ~.Hl7ConnectorDualPortMllp --abstract --extends ~.Hl7Connector
+field number --fieldName inboundPort --type int --notNull --comment "Inbound port"
+field number --fieldName outboundPort --type int --notNull --comment "Outbound port"
+entity jpa --class ~.Hl7ConnectorSinglePortMllpReceiver --extends ~.Hl7ConnectorSinglePortMllp
+entity jpa --class ~.Hl7ConnectorSinglePortMllpSender --extends ~.Hl7ConnectorSinglePortMllp
+entity jpa --class ~.Hl7ConnectorDualPortMllpReceiver --extends ~.Hl7ConnectorDualPortMllp
+entity jpa --class ~.Hl7ConnectorDualPortMllpSender --extends ~.Hl7ConnectorDualPortMllp
