@@ -5,6 +5,16 @@ package io.github.venis.hl7studio.config.jackson;
 
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import io.github.venis.hl7studio.config.jackson.DomainModelModule;
+import io.github.venis.hl7studio.model.Hl7ConnectorDualPortMllpReceiver;
+import io.github.venis.hl7studio.model.Hl7ConnectorDualPortMllpSender;
+import io.github.venis.hl7studio.model.Hl7ConnectorSinglePortMllpReceiver;
+import io.github.venis.hl7studio.model.Hl7ConnectorSinglePortMllpSender;
+import io.github.venis.hl7studio.model.Hl7Message;
+import io.github.venis.hl7studio.web.Hl7ConnectorDualPortMllpReceiverJsonMixin;
+import io.github.venis.hl7studio.web.Hl7ConnectorDualPortMllpSenderJsonMixin;
+import io.github.venis.hl7studio.web.Hl7ConnectorSinglePortMllpReceiverJsonMixin;
+import io.github.venis.hl7studio.web.Hl7ConnectorSinglePortMllpSenderJsonMixin;
+import io.github.venis.hl7studio.web.Hl7MessageJsonMixin;
 import org.springframework.boot.jackson.JsonComponent;
 
 privileged aspect DomainModelModule_Roo_DomainModelModule {
@@ -20,6 +30,11 @@ privileged aspect DomainModelModule_Roo_DomainModelModule {
     public DomainModelModule.new() {
         // Mixin registration
         
+        setMixInAnnotation(Hl7ConnectorDualPortMllpReceiver.class, Hl7ConnectorDualPortMllpReceiverJsonMixin.class);
+        setMixInAnnotation(Hl7ConnectorDualPortMllpSender.class, Hl7ConnectorDualPortMllpSenderJsonMixin.class);
+        setMixInAnnotation(Hl7ConnectorSinglePortMllpReceiver.class, Hl7ConnectorSinglePortMllpReceiverJsonMixin.class);
+        setMixInAnnotation(Hl7ConnectorSinglePortMllpSender.class, Hl7ConnectorSinglePortMllpSenderJsonMixin.class);
+        setMixInAnnotation(Hl7Message.class, Hl7MessageJsonMixin.class);
     }
 
 }

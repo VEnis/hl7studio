@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+  <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_hl7message})}|">Show Hl7Message - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-layout-fragment="content" data-th-object="${hl7Message}">
+        <div class="container-fluid content">
+
+          <!-- CONTENT -->
+          <h1 data-th-text="#{label_show_entity(#{label_hl7message})}">Show Hl7Message</h1>
+
+            <div id="mainEntityFieldSet">
+              <h2 data-th-text="#{label_data_entity(#{label_hl7message})}">Hl7Message data</h2>
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="hl7message-title-field" data-z="5d06727f">
+            	      <strong data-th-text="#{label_hl7message_title}">title</strong>
+                    <span data-th-text="*{{title}}">titleValue</span>
+         	        </li>
+                  <li id="hl7message-raw-field" data-z="dd12c07f">
+            	      <strong data-th-text="#{label_hl7message_raw}">raw</strong>
+                    <span data-th-text="*{{raw}}">rawValue</span>
+         	        </li>
+                  <li id="hl7message-hl7sendingapplication-field" data-z="dcb2d05f">
+            	      <strong data-th-text="#{label_hl7message_hl7sendingapplication}">hl7SendingApplication</strong>
+                    <span data-th-text="*{{hl7SendingApplication}}">hl7SendingApplicationValue</span>
+         	        </li>
+                  <li id="hl7message-hl7sendingfacility-field" data-z="291525ff">
+            	      <strong data-th-text="#{label_hl7message_hl7sendingfacility}">hl7SendingFacility</strong>
+                    <span data-th-text="*{{hl7SendingFacility}}">hl7SendingFacilityValue</span>
+         	        </li>
+                  <li id="hl7message-hl7receivingapplication-field" data-z="357d691f">
+            	      <strong data-th-text="#{label_hl7message_hl7receivingapplication}">hl7ReceivingApplication</strong>
+                    <span data-th-text="*{{hl7ReceivingApplication}}">hl7ReceivingApplicationValue</span>
+         	        </li>
+                  <li id="hl7message-hl7receivingfacility-field" data-z="d63f453f">
+            	      <strong data-th-text="#{label_hl7message_hl7receivingfacility}">hl7ReceivingFacility</strong>
+                    <span data-th-text="*{{hl7ReceivingFacility}}">hl7ReceivingFacilityValue</span>
+         	        </li>
+                  <li id="hl7message-hl7datetimeofmessage-field" data-z="d6d8ba7f">
+            	      <strong data-th-text="#{label_hl7message_hl7datetimeofmessage}">hl7DateTimeOfMessage</strong>
+                    <span data-th-text="*{{hl7DateTimeOfMessage}}">hl7DateTimeOfMessageValue</span>
+         	        </li>
+                  <li id="hl7message-hl7messagetype-field" data-z="6c45d7f">
+            	      <strong data-th-text="#{label_hl7message_hl7messagetype}">hl7MessageType</strong>
+                    <span data-th-text="*{{hl7MessageType}}">hl7MessageTypeValue</span>
+         	        </li>
+                  <li id="hl7message-hl7triggerevent-field" data-z="71324adf">
+            	      <strong data-th-text="#{label_hl7message_hl7triggerevent}">hl7TriggerEvent</strong>
+                    <span data-th-text="*{{hl7TriggerEvent}}">hl7TriggerEventValue</span>
+         	        </li>
+                  <li id="hl7message-hl7controlid-field" data-z="7bfd1a9f">
+            	      <strong data-th-text="#{label_hl7message_hl7controlid}">hl7ControlId</strong>
+                    <span data-th-text="*{{hl7ControlId}}">hl7ControlIdValue</span>
+         	        </li>
+                  <li id="hl7message-hl7processingid-field" data-z="755ee59f">
+            	      <strong data-th-text="#{label_hl7message_hl7processingid}">hl7ProcessingId</strong>
+                    <span data-th-text="*{{hl7ProcessingId}}">hl7ProcessingIdValue</span>
+         	        </li>
+                  <li id="hl7message-hl7versionid-field" data-z="bd576f3f">
+            	      <strong data-th-text="#{label_hl7message_hl7versionid}">hl7VersionId</strong>
+                    <span data-th-text="*{{hl7VersionId}}">hl7VersionIdValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+
+          <div class="clearfix">
+            <div class="pull-right">
+             <a id="Hl7Message_edit" href="edit.html" class="btn btn-primary" data-th-title="#{label_goEdit}" data-th-href="${@linkBuilder.of('Hl7MessagesItemThymeleafController').to('editForm').with('hl7Message', hl7Message.id)}" data-th-text="#{label_edit}">Edit</a>
+            </div>
+          </div>
+
+
+          <div class="clearfix">
+            <div class="pull-left">
+              <a id="Hl7Message_list" href="list.html" class="btn btn-default" data-th-title="#{label_goBack}" data-th-href="${@linkBuilder.of('Hl7MessagesCollectionThymeleafController').to('list')}">
+  	             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  	             <span data-th-text="#{label_back}">Back</span>
+  	          </a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

@@ -3,6 +3,8 @@ import org.springframework.roo.addon.javabean.annotations.RooJavaBean;
 import org.springframework.roo.addon.javabean.annotations.RooToString;
 import org.springframework.roo.addon.jpa.annotations.entity.RooJpaEntity;
 
+import javax.persistence.DiscriminatorValue;
+
 /**
  * = Hl7ConnectorDualPortMllpSender
  *
@@ -12,5 +14,6 @@ import org.springframework.roo.addon.jpa.annotations.entity.RooJpaEntity;
 @RooJavaBean
 @RooToString
 @RooJpaEntity
+@DiscriminatorValue("DPMS")
 public class Hl7ConnectorDualPortMllpSender extends Hl7ConnectorDualPortMllp {
 }

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-layout}">
+  <head id="head">
+
+    <title data-th-text="#{label_edit_entity(#{label_hl7message})}">
+    Edit Hl7Message - Spring Roo application</title>
+
+    <!-- DateTimePicker -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.min.css" data-th-href="@{/webjars/datetimepicker/2.5.4/build/jquery.datetimepicker.min.css}" />
+
+  </head>
+  
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!-- CONTAINER -->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-layout-fragment="content">
+
+        <div class="container-fluid content" data-th-with="collectionLink=${@linkBuilder.of('Hl7MessagesCollectionThymeleafController')},itemLink=${@linkBuilder.of('Hl7MessagesItemThymeleafController')}">
+
+          <h1 data-th-text="#{label_edit_entity(#{label_hl7message})}">Edit Hl7Message</h1>
+
+          <!-- FORM -->
+          <form class="form-horizontal validate" method="POST" data-th-object="${hl7Message}" data-th-action="@{${itemLink.to('update').with('hl7Message', hl7Message.id)}}">
+            <input type="hidden" name="_method" value="PUT" />
+            <input type="hidden" name="version" data-th-value="*{version}" />
+
+            <!-- CONCURRENCY CONTROL -->
+            <div class="alert alert-warning" data-th-if="${concurrency}">
+              <h2 data-th-text="#{label_concurrency_title}">Warning! This record has been updated by an other user.</h2>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="concurrency" value="apply"> <span data-th-text="#{label_concurrency_apply}">Apply my changes anyway</span> <i><span data-th-text="#{label_concurrency_apply_info}">(discard all the changes applied by the other users).</span></i>
+                </input></label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="concurrency" value="discard" checked=""> <span data-th-text="#{label_concurrency_discard}">Discard all my changes and reload this record.</span>
+                </input></label>
+              </div>
+              <br>
+              <button type="submit" class="btn btn-primary">Accept</button>
+            </br></div>
+            <!-- /CONCURRENCY CONTROL -->
+
+             <fieldset id="containerFields">
+              <legend class="sr-only" data-th-text="#{label_data_entity(#{label_hl7message})}">Hl7Message data </legend>
+
+<div class="form-group has-error has-feedback" data-z="5d06727f" id="hl7message-title-field" data-th-classappend="${#fields.hasErrors('title')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="title" class="col-md-3 control-label" data-th-text="#{label_hl7message_title}">title</label>
+  <div class="col-md-6">
+    <input id="title" name="title" data-th-value="*{{title}}" type="text" class="form-control" placeholder="title" data-th-placeholder="#{label_hl7message_title}" data-toggle="tooltip" aria-describedby="titleStatus" maxlength="200" size="200" />
+      <span data-th-classappend="${#fields.hasErrors('title')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('title')}" aria-hidden="true"></span>
+      <span id="title-error" class="help-block" data-th-if="${#fields.hasErrors('title')}" data-th-errors="*{title}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="dd12c07f" id="hl7message-raw-field" data-th-classappend="${#fields.hasErrors('raw')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="raw" class="col-md-3 control-label" data-th-text="#{label_hl7message_raw}">raw</label>
+  <div class="col-md-6">
+    <input id="raw" name="raw" data-th-value="*{{raw}}" type="text" class="form-control" placeholder="raw" data-th-placeholder="#{label_hl7message_raw}" data-toggle="tooltip" aria-describedby="rawStatus" required="required" maxlength="1048576" size="1048576" />
+      <span data-th-classappend="${#fields.hasErrors('raw')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('raw')}" aria-hidden="true"></span>
+      <span id="raw-error" class="help-block" data-th-if="${#fields.hasErrors('raw')}" data-th-errors="*{raw}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="dcb2d05f" id="hl7message-hl7sendingapplication-field" data-th-classappend="${#fields.hasErrors('hl7SendingApplication')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="hl7SendingApplication" class="col-md-3 control-label" data-th-text="#{label_hl7message_hl7sendingapplication}">hl7SendingApplication</label>
+  <div class="col-md-6">
+    <input id="hl7SendingApplication" name="hl7SendingApplication" data-th-value="*{{hl7SendingApplication}}" type="text" class="form-control" placeholder="hl7SendingApplication" data-th-placeholder="#{label_hl7message_hl7sendingapplication}" data-toggle="tooltip" aria-describedby="hl7SendingApplicationStatus" />
+      <span data-th-classappend="${#fields.hasErrors('hl7SendingApplication')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('hl7SendingApplication')}" aria-hidden="true"></span>
+      <span id="hl7SendingApplication-error" class="help-block" data-th-if="${#fields.hasErrors('hl7SendingApplication')}" data-th-errors="*{hl7SendingApplication}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="291525ff" id="hl7message-hl7sendingfacility-field" data-th-classappend="${#fields.hasErrors('hl7SendingFacility')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="hl7SendingFacility" class="col-md-3 control-label" data-th-text="#{label_hl7message_hl7sendingfacility}">hl7SendingFacility</label>
+  <div class="col-md-6">
+    <input id="hl7SendingFacility" name="hl7SendingFacility" data-th-value="*{{hl7SendingFacility}}" type="text" class="form-control" placeholder="hl7SendingFacility" data-th-placeholder="#{label_hl7message_hl7sendingfacility}" data-toggle="tooltip" aria-describedby="hl7SendingFacilityStatus" />
+      <span data-th-classappend="${#fields.hasErrors('hl7SendingFacility')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('hl7SendingFacility')}" aria-hidden="true"></span>
+      <span id="hl7SendingFacility-error" class="help-block" data-th-if="${#fields.hasErrors('hl7SendingFacility')}" data-th-errors="*{hl7SendingFacility}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="357d691f" id="hl7message-hl7receivingapplication-field" data-th-classappend="${#fields.hasErrors('hl7ReceivingApplication')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="hl7ReceivingApplication" class="col-md-3 control-label" data-th-text="#{label_hl7message_hl7receivingapplication}">hl7ReceivingApplication</label>
+  <div class="col-md-6">
+    <input id="hl7ReceivingApplication" name="hl7ReceivingApplication" data-th-value="*{{hl7ReceivingApplication}}" type="text" class="form-control" placeholder="hl7ReceivingApplication" data-th-placeholder="#{label_hl7message_hl7receivingapplication}" data-toggle="tooltip" aria-describedby="hl7ReceivingApplicationStatus" />
+      <span data-th-classappend="${#fields.hasErrors('hl7ReceivingApplication')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('hl7ReceivingApplication')}" aria-hidden="true"></span>
+      <span id="hl7ReceivingApplication-error" class="help-block" data-th-if="${#fields.hasErrors('hl7ReceivingApplication')}" data-th-errors="*{hl7ReceivingApplication}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="d63f453f" id="hl7message-hl7receivingfacility-field" data-th-classappend="${#fields.hasErrors('hl7ReceivingFacility')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="hl7ReceivingFacility" class="col-md-3 control-label" data-th-text="#{label_hl7message_hl7receivingfacility}">hl7ReceivingFacility</label>
+  <div class="col-md-6">
+    <input id="hl7ReceivingFacility" name="hl7ReceivingFacility" data-th-value="*{{hl7ReceivingFacility}}" type="text" class="form-control" placeholder="hl7ReceivingFacility" data-th-placeholder="#{label_hl7message_hl7receivingfacility}" data-toggle="tooltip" aria-describedby="hl7ReceivingFacilityStatus" />
+      <span data-th-classappend="${#fields.hasErrors('hl7ReceivingFacility')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('hl7ReceivingFacility')}" aria-hidden="true"></span>
+      <span id="hl7ReceivingFacility-error" class="help-block" data-th-if="${#fields.hasErrors('hl7ReceivingFacility')}" data-th-errors="*{hl7ReceivingFacility}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" id="hl7message-hl7datetimeofmessage-field" data-z="d6d8ba7f" data-th-classappend="${#fields.hasErrors('hl7DateTimeOfMessage')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="hl7DateTimeOfMessage" class="col-md-3 control-label" data-th-text="#{label_hl7message_hl7datetimeofmessage}">hl7DateTimeOfMessage</label>
+  <div class="col-md-3">
+    <input id="hl7DateTimeOfMessage" name="hl7DateTimeOfMessage" data-th-value="*{{hl7DateTimeOfMessage}}" type="text" class="form-control datetimepicker" placeholder="hl7DateTimeOfMessage" data-th-placeholder="#{label_hl7message_hl7datetimeofmessage}" data-th-attr="data-dateformat=${hl7DateTimeOfMessage_date_format}" data-toggle="tooltip" /> <span data-th-classappend="${#fields.hasErrors('hl7DateTimeOfMessage')}? 'glyphicon glyphicon-remove form-control-feedback'" data-th-if="${#fields.hasErrors('hl7DateTimeOfMessage')}" aria-hidden="true"></span>
+     <span id="hl7DateTimeOfMessage-error" class="help-block" data-th-if="${#fields.hasErrors('hl7DateTimeOfMessage')}" data-th-errors="*{hl7DateTimeOfMessage}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="6c45d7f" id="hl7message-hl7messagetype-field" data-th-classappend="${#fields.hasErrors('hl7MessageType')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="hl7MessageType" class="col-md-3 control-label" data-th-text="#{label_hl7message_hl7messagetype}">hl7MessageType</label>
+  <div class="col-md-6">
+    <input id="hl7MessageType" name="hl7MessageType" data-th-value="*{{hl7MessageType}}" type="text" class="form-control" placeholder="hl7MessageType" data-th-placeholder="#{label_hl7message_hl7messagetype}" data-toggle="tooltip" aria-describedby="hl7MessageTypeStatus" />
+      <span data-th-classappend="${#fields.hasErrors('hl7MessageType')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('hl7MessageType')}" aria-hidden="true"></span>
+      <span id="hl7MessageType-error" class="help-block" data-th-if="${#fields.hasErrors('hl7MessageType')}" data-th-errors="*{hl7MessageType}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="71324adf" id="hl7message-hl7triggerevent-field" data-th-classappend="${#fields.hasErrors('hl7TriggerEvent')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="hl7TriggerEvent" class="col-md-3 control-label" data-th-text="#{label_hl7message_hl7triggerevent}">hl7TriggerEvent</label>
+  <div class="col-md-6">
+    <input id="hl7TriggerEvent" name="hl7TriggerEvent" data-th-value="*{{hl7TriggerEvent}}" type="text" class="form-control" placeholder="hl7TriggerEvent" data-th-placeholder="#{label_hl7message_hl7triggerevent}" data-toggle="tooltip" aria-describedby="hl7TriggerEventStatus" />
+      <span data-th-classappend="${#fields.hasErrors('hl7TriggerEvent')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('hl7TriggerEvent')}" aria-hidden="true"></span>
+      <span id="hl7TriggerEvent-error" class="help-block" data-th-if="${#fields.hasErrors('hl7TriggerEvent')}" data-th-errors="*{hl7TriggerEvent}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="7bfd1a9f" id="hl7message-hl7controlid-field" data-th-classappend="${#fields.hasErrors('hl7ControlId')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="hl7ControlId" class="col-md-3 control-label" data-th-text="#{label_hl7message_hl7controlid}">hl7ControlId</label>
+  <div class="col-md-6">
+    <input id="hl7ControlId" name="hl7ControlId" data-th-value="*{{hl7ControlId}}" type="text" class="form-control" placeholder="hl7ControlId" data-th-placeholder="#{label_hl7message_hl7controlid}" data-toggle="tooltip" aria-describedby="hl7ControlIdStatus" />
+      <span data-th-classappend="${#fields.hasErrors('hl7ControlId')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('hl7ControlId')}" aria-hidden="true"></span>
+      <span id="hl7ControlId-error" class="help-block" data-th-if="${#fields.hasErrors('hl7ControlId')}" data-th-errors="*{hl7ControlId}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="755ee59f" id="hl7message-hl7processingid-field" data-th-classappend="${#fields.hasErrors('hl7ProcessingId')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="hl7ProcessingId" class="col-md-3 control-label" data-th-text="#{label_hl7message_hl7processingid}">hl7ProcessingId</label>
+  <div class="col-md-6">
+    <input id="hl7ProcessingId" name="hl7ProcessingId" data-th-value="*{{hl7ProcessingId}}" type="text" class="form-control" placeholder="hl7ProcessingId" data-th-placeholder="#{label_hl7message_hl7processingid}" data-toggle="tooltip" aria-describedby="hl7ProcessingIdStatus" />
+      <span data-th-classappend="${#fields.hasErrors('hl7ProcessingId')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('hl7ProcessingId')}" aria-hidden="true"></span>
+      <span id="hl7ProcessingId-error" class="help-block" data-th-if="${#fields.hasErrors('hl7ProcessingId')}" data-th-errors="*{hl7ProcessingId}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="bd576f3f" id="hl7message-hl7versionid-field" data-th-classappend="${#fields.hasErrors('hl7VersionId')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="hl7VersionId" class="col-md-3 control-label" data-th-text="#{label_hl7message_hl7versionid}">hl7VersionId</label>
+  <div class="col-md-6">
+    <input id="hl7VersionId" name="hl7VersionId" data-th-value="*{{hl7VersionId}}" type="text" class="form-control" placeholder="hl7VersionId" data-th-placeholder="#{label_hl7message_hl7versionid}" data-toggle="tooltip" aria-describedby="hl7VersionIdStatus" />
+      <span data-th-classappend="${#fields.hasErrors('hl7VersionId')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('hl7VersionId')}" aria-hidden="true"></span>
+      <span id="hl7VersionId-error" class="help-block" data-th-if="${#fields.hasErrors('hl7VersionId')}" data-th-errors="*{hl7VersionId}">Error message.</span>
+  </div>
+</div>
+             </fieldset>
+
+
+              <!-- buttons form -->
+              <div class="form-group">
+                <div class="col-md-12">
+                  <div class="pull-left">
+                    <button type="reset" class="btn btn-default" onclick="location.href='list.html'" data-th-onclick="'location.href=\'' + @{${collectionLink.to('list')}} + '\''" data-th-text="#{label_reset}">Cancel</button>
+                  </div>
+                  <div class="pull-right">
+                    <button type="submit" class="btn btn-primary" data-th-text="#{label_save}">Save</button>
+                  </div>
+                </div>
+              </div>
+
+          </form>
+          <!-- /FORM -->
+
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+   </div>
+   <!-- /CONTAINER -->
+
+   <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+   </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+
+    <!-- DateTimePicker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js" data-th-src="@{/webjars/datetimepicker/build/jquery.datetimepicker.full.min.js}"></script>
+    <script src="../../static/public/js/datetimepicker-defaults.js" data-th-src="@{/public/js/datetimepicker-defaults.js}"></script>
+
+    <!-- jquery.inputmask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.1/jquery.inputmask.bundle.min.js" data-th-src="@{/webjars/jquery.inputmask/min/jquery.inputmask.bundle.min.js}"></script>
+    <script type="text/javascript" data-th-inline="javascript">
+      (function(jQuery) {
+        jQuery(document).ready(
+      	  function() {
+      	    Inputmask.extendAliases({
+      	      'numeric' : {
+      	         'groupSeparator' : /*[[#{label_inputmask_groupSeparator}]]*/'.',
+      	         'radixPoint' : /*[[#{label_inputmask_radixPoint}]]*/','
+      	       },
+      	       'currency' : {
+      	          'prefix' : /*[[#{label_inputmask_prefix}]]*/'',
+      	          'suffix' : /*[[#{label_inputmask_suffix}]]*/' €'
+      	        }
+      	    });
+      	 });
+       })(jQuery);
+    </script>
+    <script src="../../static/public/js/inputmask-defaults.js" data-th-src="@{/public/js/inputmask-defaults.js}"></script>
+
+    <!-- JQuery Validation -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js" data-th-src="@{/webjars/jquery-validation/dist/jquery.validate.min.js}">
+      </script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js" data-th-src="@{/webjars/jquery-validation/dist/additional-methods.min.js}">
+      </script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/localization/messages_es.js" data-th-src="@{/webjars/jquery-validation/src/localization/messages_}+${#locale.language}+'.js'" data-th-if="${#locale.language} != 'en'">
+      </script>
+    <script src="../../static/public/js/validation-defaults.js" data-th-src="@{/public/js/validation-defaults.js}">
+      </script>
+    <script type="text/javascript" data-th-inline="javascript">
+      (function(jQuery) {
+         jQuery(document).ready(function() {
+      	   jQuery.extend( jQuery.validator.messages, {
+      	     'dateformat' : /*[[#{error_invalid_date}]]*/ 'Please enter a correct date/time',
+      	     'inputmask': /*[[#{error_invalid_maskValue}]]*/ 'Please enter a valid value',
+      	   });
+      	 });
+      })(jQuery);
+      </script>
+
+    </div>
+
+  </body>
+
+</html>

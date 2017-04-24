@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-list-layout}">
+  <head id="head">
+
+    <title data-th-text="|#{label_show_entity(#{label_hl7connectordualportmllpsender})}|">Show Hl7ConnectorDualPortMllpSender - Spring Roo application</title>
+
+  </head>
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!--CONTAINER-->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-layout-fragment="content" data-th-object="${hl7ConnectorDualPortMllpSender}">
+        <div class="container-fluid content">
+
+          <!-- CONTENT -->
+          <h1 data-th-text="#{label_show_entity(#{label_hl7connectordualportmllpsender})}">Show Hl7ConnectorDualPortMllpSender</h1>
+
+            <div id="mainEntityFieldSet">
+              <h2 data-th-text="#{label_data_entity(#{label_hl7connectordualportmllpsender})}">Hl7ConnectorDualPortMllpSender data</h2>
+              <ul class="list-unstyled" id="containerFields">
+                  <li id="hl7connectordualportmllpsender-title-field" data-z="78c26104">
+            	      <strong data-th-text="#{label_hl7connectordualportmllpsender_title}">title</strong>
+                    <span data-th-text="*{{title}}">titleValue</span>
+         	        </li>
+                  <li id="hl7connectordualportmllpsender-encoding-field" data-z="da9ae03a">
+            	      <strong data-th-text="#{label_hl7connectordualportmllpsender_encoding}">encoding</strong>
+                    <span data-th-text="*{{encoding}}">encodingValue</span>
+         	        </li>
+                  <li id="hl7connectordualportmllpsender-charset-field" data-z="f2befd44">
+            	      <strong data-th-text="#{label_hl7connectordualportmllpsender_charset}">charset</strong>
+                    <span data-th-text="*{{charset}}">charsetValue</span>
+         	        </li>
+                  <li id="hl7connectordualportmllpsender-host-field" data-z="7df7f1a">
+            	      <strong data-th-text="#{label_hl7connectordualportmllpsender_host}">host</strong>
+                    <span data-th-text="*{{host}}">hostValue</span>
+         	        </li>
+                  <li id="hl7connectordualportmllpsender-usetlsssl-field" data-z="8768d684">
+            	      <strong data-th-text="#{label_hl7connectordualportmllpsender_usetlsssl}">useTlsSsl</strong>
+                    <span data-th-text="*{{useTlsSsl}}">useTlsSslValue</span>
+         	        </li>
+                  <li id="hl7connectordualportmllpsender-detectcharsetfrommessage-field" data-z="629ab5fa">
+            	      <strong data-th-text="#{label_hl7connectordualportmllpsender_detectcharsetfrommessage}">detectCharsetFromMessage</strong>
+                    <span data-th-text="*{{detectCharsetFromMessage}}">detectCharsetFromMessageValue</span>
+         	        </li>
+                  <li id="hl7connectordualportmllpsender-runstate-field" data-z="c4ca51ba">
+            	      <strong data-th-text="#{label_hl7connectordualportmllpsender_runstate}">runState</strong>
+                    <span data-th-text="*{{runState}}">runStateValue</span>
+         	        </li>
+                  <li id="hl7connectordualportmllpsender-inboundport-field" data-z="f3ed2124">
+            	      <strong data-th-text="#{label_hl7connectordualportmllpsender_inboundport}">inboundPort</strong>
+                    <span data-th-text="*{{inboundPort}}">inboundPortValue</span>
+         	        </li>
+                  <li id="hl7connectordualportmllpsender-outboundport-field" data-z="dc96eb1a">
+            	      <strong data-th-text="#{label_hl7connectordualportmllpsender_outboundport}">outboundPort</strong>
+                    <span data-th-text="*{{outboundPort}}">outboundPortValue</span>
+         	        </li>
+              </ul>
+            </div>
+
+
+          <div class="clearfix">
+            <div class="pull-right">
+             <a id="Hl7ConnectorDualPortMllpSender_edit" href="edit.html" class="btn btn-primary" data-th-title="#{label_goEdit}" data-th-href="${@linkBuilder.of('Hl7ConnectorDualPortMllpSendersItemThymeleafController').to('editForm').with('hl7ConnectorDualPortMllpSender', hl7ConnectorDualPortMllpSender.id)}" data-th-text="#{label_edit}">Edit</a>
+            </div>
+          </div>
+
+
+          <div class="clearfix">
+            <div class="pull-left">
+              <a id="Hl7ConnectorDualPortMllpSender_list" href="list.html" class="btn btn-default" data-th-title="#{label_goBack}" data-th-href="${@linkBuilder.of('Hl7ConnectorDualPortMllpSendersCollectionThymeleafController').to('list')}">
+  	             <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+  	             <span data-th-text="#{label_back}">Back</span>
+  	          </a>
+            </div>
+          </div>
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+  </div>
+  <!-- /CONTAINER -->
+
+  <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+  </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+  </div>
+
+  </body>
+
+</html>

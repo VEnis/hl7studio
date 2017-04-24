@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" data-layout-decorate="~{layouts/default-layout}">
+  <head id="head">
+
+    <title data-th-text="#{label_edit_entity(#{label_hl7connectordualportmllpsender})}">
+    Edit Hl7ConnectorDualPortMllpSender - Spring Roo application</title>
+
+    <!-- DateTimePicker -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.min.css" data-th-href="@{/webjars/datetimepicker/2.5.4/build/jquery.datetimepicker.min.css}" />
+
+  </head>
+  
+
+  <body id="body">
+
+    <header role="banner">
+      <!-- Content replaced by layout of the page displayed -->
+    </header>
+
+    <!-- CONTAINER -->
+    <div class="container bg-container">
+      <!-- CONTENT -->
+      <!--
+        Only the inner content of the following tag "section" is included
+        within the template, in the section "content"
+      -->
+      <section data-layout-fragment="content">
+
+        <div class="container-fluid content" data-th-with="collectionLink=${@linkBuilder.of('Hl7ConnectorDualPortMllpSendersCollectionThymeleafController')},itemLink=${@linkBuilder.of('Hl7ConnectorDualPortMllpSendersItemThymeleafController')}">
+
+          <h1 data-th-text="#{label_edit_entity(#{label_hl7connectordualportmllpsender})}">Edit Hl7ConnectorDualPortMllpSender</h1>
+
+          <!-- FORM -->
+          <form class="form-horizontal validate" method="POST" data-th-object="${hl7ConnectorDualPortMllpSender}" data-th-action="@{${itemLink.to('update').with('hl7ConnectorDualPortMllpSender', hl7ConnectorDualPortMllpSender.id)}}">
+            <input type="hidden" name="_method" value="PUT" />
+            <input type="hidden" name="version" data-th-value="*{version}" />
+
+            <!-- CONCURRENCY CONTROL -->
+            <div class="alert alert-warning" data-th-if="${concurrency}">
+              <h2 data-th-text="#{label_concurrency_title}">Warning! This record has been updated by an other user.</h2>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="concurrency" value="apply"> <span data-th-text="#{label_concurrency_apply}">Apply my changes anyway</span> <i><span data-th-text="#{label_concurrency_apply_info}">(discard all the changes applied by the other users).</span></i>
+                </input></label>
+              </div>
+              <div class="radio">
+                <label>
+                  <input type="radio" name="concurrency" value="discard" checked=""> <span data-th-text="#{label_concurrency_discard}">Discard all my changes and reload this record.</span>
+                </input></label>
+              </div>
+              <br>
+              <button type="submit" class="btn btn-primary">Accept</button>
+            </br></div>
+            <!-- /CONCURRENCY CONTROL -->
+
+             <fieldset id="containerFields">
+              <legend class="sr-only" data-th-text="#{label_data_entity(#{label_hl7connectordualportmllpsender})}">Hl7ConnectorDualPortMllpSender data </legend>
+
+<div class="form-group has-error has-feedback" data-z="78c26104" id="hl7connectordualportmllpsender-title-field" data-th-classappend="${#fields.hasErrors('title')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="title" class="col-md-3 control-label" data-th-text="#{label_hl7connectordualportmllpsender_title}">title</label>
+  <div class="col-md-6">
+    <input id="title" name="title" data-th-value="*{{title}}" type="text" class="form-control" placeholder="title" data-th-placeholder="#{label_hl7connectordualportmllpsender_title}" data-toggle="tooltip" aria-describedby="titleStatus" />
+      <span data-th-classappend="${#fields.hasErrors('title')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('title')}" aria-hidden="true"></span>
+      <span id="title-error" class="help-block" data-th-if="${#fields.hasErrors('title')}" data-th-errors="*{title}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="da9ae03a" id="hl7connectordualportmllpsender-encoding-field" data-th-classappend="${#fields.hasErrors('encoding')}? 'has-error has-feedback'" data-th-class="form-group">
+    <label for="encoding" class="col-md-3 control-label" data-th-text="#{label_hl7connectordualportmllpsender_encoding}">encoding</label>
+    <div class="col-md-6">
+      <!-- Select2 -->
+      <select data-th-field="*{encoding}" class="form-control dropdown-select-simple" data-allow-clear="true" data-th-attr="data-placeholder=#{info_select_an_option}" required="required">
+         <option data-th-each="item : ${encoding}" data-th-value="${item}" data-th-text="${{item}}">Value</option>
+      </select>
+      <span data-th-classappend="${#fields.hasErrors('encoding')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('encoding')}" aria-hidden="true"></span>
+      <span id="encoding-error" class="help-block" data-th-if="${#fields.hasErrors('encoding')}" data-th-errors="*{encoding}">Error message.</span>
+    </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="f2befd44" id="hl7connectordualportmllpsender-charset-field" data-th-classappend="${#fields.hasErrors('charset')}? 'has-error has-feedback'" data-th-class="form-group">
+    <label for="charset" class="col-md-3 control-label" data-th-text="#{label_hl7connectordualportmllpsender_charset}">charset</label>
+    <div class="col-md-6">
+      <!-- Select2 -->
+      <select data-th-field="*{charset}" class="form-control dropdown-select-simple" data-allow-clear="true" data-th-attr="data-placeholder=#{info_select_an_option}">
+         <option data-th-each="item : ${charset}" data-th-value="${item}" data-th-text="${{item}}">Value</option>
+      </select>
+      <span data-th-classappend="${#fields.hasErrors('charset')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('charset')}" aria-hidden="true"></span>
+      <span id="charset-error" class="help-block" data-th-if="${#fields.hasErrors('charset')}" data-th-errors="*{charset}">Error message.</span>
+    </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="7df7f1a" id="hl7connectordualportmllpsender-host-field" data-th-classappend="${#fields.hasErrors('host')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="host" class="col-md-3 control-label" data-th-text="#{label_hl7connectordualportmllpsender_host}">host</label>
+  <div class="col-md-6">
+    <input id="host" name="host" data-th-value="*{{host}}" type="text" class="form-control" placeholder="host" data-th-placeholder="#{label_hl7connectordualportmllpsender_host}" data-toggle="tooltip" aria-describedby="hostStatus" required="required" />
+      <span data-th-classappend="${#fields.hasErrors('host')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('host')}" aria-hidden="true"></span>
+      <span id="host-error" class="help-block" data-th-if="${#fields.hasErrors('host')}" data-th-errors="*{host}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" id="hl7connectordualportmllpsender-usetlsssl-field" data-z="8768d684" data-th-classappend="${#fields.hasErrors('useTlsSsl')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label class="col-md-3 control-label" for="useTlsSsl" data-th-text="#{label_hl7connectordualportmllpsender_usetlsssl}">useTlsSsl</label>
+  <div class="col-md-6">
+    <div class="checkbox">
+      <input type="checkbox" data-th-field="*{useTlsSsl}" data-th-title="#{label_requiredfield}" data-toggle="tooltip" />
+       <span data-th-classappend="${#fields.hasErrors('useTlsSsl')}? 'form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('useTlsSsl')}" aria-hidden="true"></span>
+        <span id="useTlsSsl-error" class="help-block" data-th-if="${#fields.hasErrors('useTlsSsl')}" data-th-errors="*{useTlsSsl}">Error message.</span>
+    </div>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" id="hl7connectordualportmllpsender-detectcharsetfrommessage-field" data-z="629ab5fa" data-th-classappend="${#fields.hasErrors('detectCharsetFromMessage')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label class="col-md-3 control-label" for="detectCharsetFromMessage" data-th-text="#{label_hl7connectordualportmllpsender_detectcharsetfrommessage}">detectCharsetFromMessage</label>
+  <div class="col-md-6">
+    <div class="checkbox">
+      <input type="checkbox" data-th-field="*{detectCharsetFromMessage}" data-th-title="#{label_requiredfield}" data-toggle="tooltip" />
+       <span data-th-classappend="${#fields.hasErrors('detectCharsetFromMessage')}? 'form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('detectCharsetFromMessage')}" aria-hidden="true"></span>
+        <span id="detectCharsetFromMessage-error" class="help-block" data-th-if="${#fields.hasErrors('detectCharsetFromMessage')}" data-th-errors="*{detectCharsetFromMessage}">Error message.</span>
+    </div>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="c4ca51ba" id="hl7connectordualportmllpsender-runstate-field" data-th-classappend="${#fields.hasErrors('runState')}? 'has-error has-feedback'" data-th-class="form-group">
+    <label for="runState" class="col-md-3 control-label" data-th-text="#{label_hl7connectordualportmllpsender_runstate}">runState</label>
+    <div class="col-md-6">
+      <!-- Select2 -->
+      <select data-th-field="*{runState}" class="form-control dropdown-select-simple" data-allow-clear="true" data-th-attr="data-placeholder=#{info_select_an_option}">
+         <option data-th-each="item : ${runState}" data-th-value="${item}" data-th-text="${{item}}">Value</option>
+      </select>
+      <span data-th-classappend="${#fields.hasErrors('runState')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('runState')}" aria-hidden="true"></span>
+      <span id="runState-error" class="help-block" data-th-if="${#fields.hasErrors('runState')}" data-th-errors="*{runState}">Error message.</span>
+    </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="f3ed2124" id="hl7connectordualportmllpsender-inboundport-field" data-th-classappend="${#fields.hasErrors('inboundPort')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="inboundPort" class="col-md-3 control-label" data-th-text="#{label_hl7connectordualportmllpsender_inboundport}">inboundPort</label>
+  <div class="col-md-3">
+    <input id="inboundPort" name="inboundPort" data-th-value="*{{inboundPort}}" type="text" class="form-control inputmask" placeholder="inboundPort" data-th-placeholder="#{label_hl7connectordualportmllpsender_inboundport}" data-toggle="tooltip" aria-describedby="inboundPortStatus" data-inputmask-alias="numeric" data-inputmask-digits="0" required="required" />
+      <span data-th-classappend="${#fields.hasErrors('inboundPort')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('inboundPort')}" aria-hidden="true"></span>
+      <span id="inboundPort-error" class="help-block" data-th-if="${#fields.hasErrors('inboundPort')}" data-th-errors="*{inboundPort}">Error message.</span>
+  </div>
+</div>
+<div class="form-group has-error has-feedback" data-z="dc96eb1a" id="hl7connectordualportmllpsender-outboundport-field" data-th-classappend="${#fields.hasErrors('outboundPort')}? 'has-error has-feedback'" data-th-class="form-group">
+  <label for="outboundPort" class="col-md-3 control-label" data-th-text="#{label_hl7connectordualportmllpsender_outboundport}">outboundPort</label>
+  <div class="col-md-3">
+    <input id="outboundPort" name="outboundPort" data-th-value="*{{outboundPort}}" type="text" class="form-control inputmask" placeholder="outboundPort" data-th-placeholder="#{label_hl7connectordualportmllpsender_outboundport}" data-toggle="tooltip" aria-describedby="outboundPortStatus" data-inputmask-alias="numeric" data-inputmask-digits="0" required="required" />
+      <span data-th-classappend="${#fields.hasErrors('outboundPort')}? 'glyphicon glyphicon-remove form-control-feedback'" class="glyphicon glyphicon-remove form-control-feedback" data-th-if="${#fields.hasErrors('outboundPort')}" aria-hidden="true"></span>
+      <span id="outboundPort-error" class="help-block" data-th-if="${#fields.hasErrors('outboundPort')}" data-th-errors="*{outboundPort}">Error message.</span>
+  </div>
+</div>
+             </fieldset>
+
+
+              <!-- buttons form -->
+              <div class="form-group">
+                <div class="col-md-12">
+                  <div class="pull-left">
+                    <button type="reset" class="btn btn-default" onclick="location.href='list.html'" data-th-onclick="'location.href=\'' + @{${collectionLink.to('list')}} + '\''" data-th-text="#{label_reset}">Cancel</button>
+                  </div>
+                  <div class="pull-right">
+                    <button type="submit" class="btn btn-primary" data-th-text="#{label_save}">Save</button>
+                  </div>
+                </div>
+              </div>
+
+          </form>
+          <!-- /FORM -->
+
+        </div>
+
+      </section>
+      <!-- /CONTENT -->
+   </div>
+   <!-- /CONTAINER -->
+
+   <footer class="container">
+    <!-- Content replaced by layout of the page displayed -->
+   </footer>
+
+  <!-- JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so that the pages load faster -->
+  <!-- JavaScript loaded by layout of the page displayed -->
+  <!--
+       Only the inner content of the following tag "javascript" is included
+       within the template, in the div "javascript"
+      -->
+  <div data-layout-fragment="javascript">
+
+    <!-- DateTimePicker -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-datetimepicker/2.5.4/build/jquery.datetimepicker.full.min.js" data-th-src="@{/webjars/datetimepicker/build/jquery.datetimepicker.full.min.js}"></script>
+    <script src="../../static/public/js/datetimepicker-defaults.js" data-th-src="@{/public/js/datetimepicker-defaults.js}"></script>
+
+    <!-- jquery.inputmask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.1/jquery.inputmask.bundle.min.js" data-th-src="@{/webjars/jquery.inputmask/min/jquery.inputmask.bundle.min.js}"></script>
+    <script type="text/javascript" data-th-inline="javascript">
+      (function(jQuery) {
+        jQuery(document).ready(
+      	  function() {
+      	    Inputmask.extendAliases({
+      	      'numeric' : {
+      	         'groupSeparator' : /*[[#{label_inputmask_groupSeparator}]]*/'.',
+      	         'radixPoint' : /*[[#{label_inputmask_radixPoint}]]*/','
+      	       },
+      	       'currency' : {
+      	          'prefix' : /*[[#{label_inputmask_prefix}]]*/'',
+      	          'suffix' : /*[[#{label_inputmask_suffix}]]*/' €'
+      	        }
+      	    });
+      	 });
+       })(jQuery);
+    </script>
+    <script src="../../static/public/js/inputmask-defaults.js" data-th-src="@{/public/js/inputmask-defaults.js}"></script>
+
+    <!-- JQuery Validation -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js" data-th-src="@{/webjars/jquery-validation/dist/jquery.validate.min.js}">
+      </script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/additional-methods.min.js" data-th-src="@{/webjars/jquery-validation/dist/additional-methods.min.js}">
+      </script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/localization/messages_es.js" data-th-src="@{/webjars/jquery-validation/src/localization/messages_}+${#locale.language}+'.js'" data-th-if="${#locale.language} != 'en'">
+      </script>
+    <script src="../../static/public/js/validation-defaults.js" data-th-src="@{/public/js/validation-defaults.js}">
+      </script>
+    <script type="text/javascript" data-th-inline="javascript">
+      (function(jQuery) {
+         jQuery(document).ready(function() {
+      	   jQuery.extend( jQuery.validator.messages, {
+      	     'dateformat' : /*[[#{error_invalid_date}]]*/ 'Please enter a correct date/time',
+      	     'inputmask': /*[[#{error_invalid_maskValue}]]*/ 'Please enter a valid value',
+      	   });
+      	 });
+      })(jQuery);
+      </script>
+
+    </div>
+
+  </body>
+
+</html>
