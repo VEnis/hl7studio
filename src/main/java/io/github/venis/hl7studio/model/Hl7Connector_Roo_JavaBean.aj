@@ -3,10 +3,6 @@
 
 package io.github.venis.hl7studio.model;
 
-import io.github.venis.hl7studio.model.Hl7Connector;
-import io.github.venis.hl7studio.model.Hl7ConnectorCharset;
-import io.github.venis.hl7studio.model.Hl7MessageEncoding;
-
 privileged aspect Hl7Connector_Roo_JavaBean {
     
     /**
@@ -151,6 +147,24 @@ privileged aspect Hl7Connector_Roo_JavaBean {
      */
     public void Hl7Connector.setDetectCharsetFromMessage(Boolean detectCharsetFromMessage) {
         this.detectCharsetFromMessage = detectCharsetFromMessage;
+    }
+    
+    /**
+     * TODO Auto-generated method documentation
+     * 
+     * @return Hl7ConnectorState
+     */
+    public Hl7ConnectorState Hl7Connector.getRunState() {
+        return this.runState;
+    }
+    
+    /**
+     * TODO Auto-generated method documentation
+     * 
+     * @param runState
+     */
+    public void Hl7Connector.setRunState(Hl7ConnectorState runState) {
+        this.runState = runState;
     }
     
 }

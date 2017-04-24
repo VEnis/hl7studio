@@ -73,4 +73,10 @@ public abstract class Hl7Connector {
      */
     @NotNull
     private Boolean detectCharsetFromMessage;
+
+    /**
+     * Connector state
+     */
+    @Enumerated(EnumType.STRING)
+    private Hl7ConnectorState runState;
 }
