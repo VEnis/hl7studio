@@ -117,3 +117,5 @@ service --all
 web mvc setup
 web mvc view setup --type THYMELEAF
 web mvc templates setup --type THYMELEAF
+web mvc controller --all --responseType THYMELEAF 
+push-in --class ~.web.Hl7MessagesCollectionThymeleafController --method list(Model)
