@@ -113,3 +113,4 @@ entity jpa --class ~.model.Hl7ConnectorSinglePortMllpSender --extends ~.model.Hl
 entity jpa --class ~.model.Hl7ConnectorDualPortMllpReceiver --extends ~.model.Hl7ConnectorDualPortMllp
 entity jpa --class ~.model.Hl7ConnectorDualPortMllpSender --extends ~.model.Hl7ConnectorDualPortMllp
 repository jpa --all 
+service --all
