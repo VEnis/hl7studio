@@ -124,3 +124,8 @@ focus --class ~.model.Hl7Connector
 // [failed] field enum --fieldName state --type ~.model.Hl7ConnectorState --enumType STRING --comment "Connector state"
 field enum --fieldName runState --type ~.model.Hl7ConnectorState --enumType STRING --comment "Connector state"
 repository jpa --all 
+repository jpa --all 
+repository jpa --all 
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2017-04-24 18:56:32
+repository jpa --all 
+service --all 

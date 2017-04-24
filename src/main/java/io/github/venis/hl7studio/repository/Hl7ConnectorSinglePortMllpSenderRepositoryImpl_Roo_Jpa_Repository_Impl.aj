@@ -7,8 +7,6 @@ import com.querydsl.core.types.Path;
 import com.querydsl.jpa.JPQLQuery;
 import io.github.venis.hl7studio.model.Hl7ConnectorSinglePortMllpSender;
 import io.github.venis.hl7studio.model.QHl7ConnectorSinglePortMllpSender;
-import io.github.venis.hl7studio.repository.Hl7ConnectorSinglePortMllpSenderRepositoryCustom;
-import io.github.venis.hl7studio.repository.Hl7ConnectorSinglePortMllpSenderRepositoryImpl;
 import io.springlets.data.domain.GlobalSearch;
 import io.springlets.data.jpa.repository.support.QueryDslRepositorySupportExt.AttributeMappingBuilder;
 import org.springframework.data.domain.Page;
@@ -61,6 +59,12 @@ privileged aspect Hl7ConnectorSinglePortMllpSenderRepositoryImpl_Roo_Jpa_Reposit
      * TODO Auto-generated attribute documentation
      * 
      */
+    public static final String Hl7ConnectorSinglePortMllpSenderRepositoryImpl.RUN_STATE = "runState";
+    
+    /**
+     * TODO Auto-generated attribute documentation
+     * 
+     */
     public static final String Hl7ConnectorSinglePortMllpSenderRepositoryImpl.PORT = "port";
     
     /**
@@ -76,7 +80,7 @@ privileged aspect Hl7ConnectorSinglePortMllpSenderRepositoryImpl_Roo_Jpa_Reposit
         
         JPQLQuery<Hl7ConnectorSinglePortMllpSender> query = from(hl7ConnectorSinglePortMllpSender);
         
-        Path<?>[] paths = new Path<?>[] {hl7ConnectorSinglePortMllpSender.title,hl7ConnectorSinglePortMllpSender.encoding,hl7ConnectorSinglePortMllpSender.charset,hl7ConnectorSinglePortMllpSender.host,hl7ConnectorSinglePortMllpSender.useTlsSsl,hl7ConnectorSinglePortMllpSender.detectCharsetFromMessage,hl7ConnectorSinglePortMllpSender.port};        
+        Path<?>[] paths = new Path<?>[] {hl7ConnectorSinglePortMllpSender.title,hl7ConnectorSinglePortMllpSender.encoding,hl7ConnectorSinglePortMllpSender.charset,hl7ConnectorSinglePortMllpSender.host,hl7ConnectorSinglePortMllpSender.useTlsSsl,hl7ConnectorSinglePortMllpSender.detectCharsetFromMessage,hl7ConnectorSinglePortMllpSender.runState,hl7ConnectorSinglePortMllpSender.port};        
         applyGlobalSearch(globalSearch, query, paths);
         
         AttributeMappingBuilder mapping = buildMapper()
@@ -86,6 +90,7 @@ privileged aspect Hl7ConnectorSinglePortMllpSenderRepositoryImpl_Roo_Jpa_Reposit
 			.map(HOST, hl7ConnectorSinglePortMllpSender.host)
 			.map(USE_TLS_SSL, hl7ConnectorSinglePortMllpSender.useTlsSsl)
 			.map(DETECT_CHARSET_FROM_MESSAGE, hl7ConnectorSinglePortMllpSender.detectCharsetFromMessage)
+			.map(RUN_STATE, hl7ConnectorSinglePortMllpSender.runState)
 			.map(PORT, hl7ConnectorSinglePortMllpSender.port);
         
         applyPagination(pageable, query, mapping);

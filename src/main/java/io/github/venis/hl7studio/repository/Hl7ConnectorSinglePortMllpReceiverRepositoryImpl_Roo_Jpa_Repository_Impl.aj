@@ -61,6 +61,12 @@ privileged aspect Hl7ConnectorSinglePortMllpReceiverRepositoryImpl_Roo_Jpa_Repos
      * TODO Auto-generated attribute documentation
      * 
      */
+    public static final String Hl7ConnectorSinglePortMllpReceiverRepositoryImpl.RUN_STATE = "runState";
+    
+    /**
+     * TODO Auto-generated attribute documentation
+     * 
+     */
     public static final String Hl7ConnectorSinglePortMllpReceiverRepositoryImpl.PORT = "port";
     
     /**
@@ -76,7 +82,7 @@ privileged aspect Hl7ConnectorSinglePortMllpReceiverRepositoryImpl_Roo_Jpa_Repos
         
         JPQLQuery<Hl7ConnectorSinglePortMllpReceiver> query = from(hl7ConnectorSinglePortMllpReceiver);
         
-        Path<?>[] paths = new Path<?>[] {hl7ConnectorSinglePortMllpReceiver.title,hl7ConnectorSinglePortMllpReceiver.encoding,hl7ConnectorSinglePortMllpReceiver.charset,hl7ConnectorSinglePortMllpReceiver.host,hl7ConnectorSinglePortMllpReceiver.useTlsSsl,hl7ConnectorSinglePortMllpReceiver.detectCharsetFromMessage,hl7ConnectorSinglePortMllpReceiver.port};        
+        Path<?>[] paths = new Path<?>[] {hl7ConnectorSinglePortMllpReceiver.title,hl7ConnectorSinglePortMllpReceiver.encoding,hl7ConnectorSinglePortMllpReceiver.charset,hl7ConnectorSinglePortMllpReceiver.host,hl7ConnectorSinglePortMllpReceiver.useTlsSsl,hl7ConnectorSinglePortMllpReceiver.detectCharsetFromMessage,hl7ConnectorSinglePortMllpReceiver.runState,hl7ConnectorSinglePortMllpReceiver.port};        
         applyGlobalSearch(globalSearch, query, paths);
         
         AttributeMappingBuilder mapping = buildMapper()
@@ -86,6 +92,7 @@ privileged aspect Hl7ConnectorSinglePortMllpReceiverRepositoryImpl_Roo_Jpa_Repos
 			.map(HOST, hl7ConnectorSinglePortMllpReceiver.host)
 			.map(USE_TLS_SSL, hl7ConnectorSinglePortMllpReceiver.useTlsSsl)
 			.map(DETECT_CHARSET_FROM_MESSAGE, hl7ConnectorSinglePortMllpReceiver.detectCharsetFromMessage)
+			.map(RUN_STATE, hl7ConnectorSinglePortMllpReceiver.runState)
 			.map(PORT, hl7ConnectorSinglePortMllpReceiver.port);
         
         applyPagination(pageable, query, mapping);

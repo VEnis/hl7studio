@@ -61,6 +61,12 @@ privileged aspect Hl7ConnectorDualPortMllpSenderRepositoryImpl_Roo_Jpa_Repositor
      * TODO Auto-generated attribute documentation
      * 
      */
+    public static final String Hl7ConnectorDualPortMllpSenderRepositoryImpl.RUN_STATE = "runState";
+    
+    /**
+     * TODO Auto-generated attribute documentation
+     * 
+     */
     public static final String Hl7ConnectorDualPortMllpSenderRepositoryImpl.INBOUND_PORT = "inboundPort";
     
     /**
@@ -82,7 +88,7 @@ privileged aspect Hl7ConnectorDualPortMllpSenderRepositoryImpl_Roo_Jpa_Repositor
         
         JPQLQuery<Hl7ConnectorDualPortMllpSender> query = from(hl7ConnectorDualPortMllpSender);
         
-        Path<?>[] paths = new Path<?>[] {hl7ConnectorDualPortMllpSender.title,hl7ConnectorDualPortMllpSender.encoding,hl7ConnectorDualPortMllpSender.charset,hl7ConnectorDualPortMllpSender.host,hl7ConnectorDualPortMllpSender.useTlsSsl,hl7ConnectorDualPortMllpSender.detectCharsetFromMessage,hl7ConnectorDualPortMllpSender.inboundPort,hl7ConnectorDualPortMllpSender.outboundPort};        
+        Path<?>[] paths = new Path<?>[] {hl7ConnectorDualPortMllpSender.title,hl7ConnectorDualPortMllpSender.encoding,hl7ConnectorDualPortMllpSender.charset,hl7ConnectorDualPortMllpSender.host,hl7ConnectorDualPortMllpSender.useTlsSsl,hl7ConnectorDualPortMllpSender.detectCharsetFromMessage,hl7ConnectorDualPortMllpSender.runState,hl7ConnectorDualPortMllpSender.inboundPort,hl7ConnectorDualPortMllpSender.outboundPort};        
         applyGlobalSearch(globalSearch, query, paths);
         
         AttributeMappingBuilder mapping = buildMapper()
@@ -92,6 +98,7 @@ privileged aspect Hl7ConnectorDualPortMllpSenderRepositoryImpl_Roo_Jpa_Repositor
 			.map(HOST, hl7ConnectorDualPortMllpSender.host)
 			.map(USE_TLS_SSL, hl7ConnectorDualPortMllpSender.useTlsSsl)
 			.map(DETECT_CHARSET_FROM_MESSAGE, hl7ConnectorDualPortMllpSender.detectCharsetFromMessage)
+			.map(RUN_STATE, hl7ConnectorDualPortMllpSender.runState)
 			.map(INBOUND_PORT, hl7ConnectorDualPortMllpSender.inboundPort)
 			.map(OUTBOUND_PORT, hl7ConnectorDualPortMllpSender.outboundPort);
         
