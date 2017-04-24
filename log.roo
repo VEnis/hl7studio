@@ -67,3 +67,48 @@ module focus --moduleName application
 web mvc setup
 web mvc view setup --type THYMELEAF 
 web mvc templates setup --type THYMELEAF 
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2017-04-24 14:16:44
+project setup --topLevelPackage io.github.venis.hl7studio --projectName hl7studio --java 8
+jpa setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY
+help
+entity jpa --class ~.model.Hl7Message
+field string --fieldName title --sizeMax 200 --comment "Hl7 message title that describes typical purpose of the message"
+field string --fieldName raw --notNull --sizeMax 1048576 --comment "Raw Hl7 message in txt ER7 format"
+field string --fieldName hl7SendingApplication --comment "Sending Application"
+field string --fieldName hl7SendingFacility --comment "Sending Facility"
+field string --fieldName hl7ReceivingApplication --comment "Receiving Application"
+field string --fieldName hl7ReceivingFacility --comment "Receiving Facility"
+field date --fieldName hl7DateTimeOfMessage --type java.util.Date --comment "Date/Time Of Message" --dateFormat MEDIUM --timeFormat MEDIUM --persistenceType JPA_TIMESTAMP --force
+field string --fieldName hl7MessageType --comment "Message Type"
+field string --fieldName hl7TriggerEvent --comment "Trigger Event"
+field string --fieldName hl7ControlId --comment "Message Control ID"
+field string --fieldName hl7ProcessingId --comment "Processing ID"
+field string --fieldName hl7VersionId --comment "Version ID"
+enum type --class ~.model.Hl7MessageEncoding
+enum constant --name ER7
+enum constant --name XML
+entity jpa --class ~.Hl7Connector --abstract --inheritanceType SINGLE_TABLE
+enum type --class ~.model.Hl7ConnectorCharset
+enum constant --name "UTF8"
+enum constant --name "ISO88591"
+focus --class ~.Hl7Connector
+// [failed] focus --class ~.model.Hl7Connector
+entity jpa --class ~.model.Hl7Connector --abstract --inheritanceType SINGLE_TABLE
+field string --fieldName title --comment "Connector title"
+// [failed] field enum --fieldName encoding --type ~.model.Hl7MessageEncoding --enumType STRING --notNull --comment "Message encoding"
+// Spring Roo 2.0.0.RC1 [rev 28015e3] log opened at 2017-04-24 14:28:31
+focus --class ~.model.Hl7Connector
+field enum --fieldName encoding --type ~.model.Hl7MessageEncoding --enumType STRING --notNull --comment "Message encoding"
+field enum --fieldName charset --type ~.model.Hl7ConnectorCharset --enumType ORDINAL --comment "Connection charset"
+field string --fieldName host --notNull --comment "Host"
+field boolean --fieldName useTlsSsl --notNull --comment "Use TLS/SSL"
+field boolean --fieldName detectCharsetFromMessage --notNull --comment "Detect encoding from MSH-18"
+entity jpa --class ~.model.Hl7ConnectorDualPortMllp --abstract --extends ~.model.Hl7Connector
+field number --fieldName inboundPort --type int --notNull --comment "Inbound port"
+field number --fieldName outboundPort --type int --notNull --comment "Outbound port"
+entity jpa --class ~.model.Hl7ConnectorSinglePortMllp --abstract --extends ~.model.Hl7Connector
+field number --fieldName port --type int --notNull --comment "Port"
+entity jpa --class ~.model.Hl7ConnectorSinglePortMllpReceiver --extends ~.model.Hl7ConnectorSinglePortMllp
+entity jpa --class ~.model.Hl7ConnectorSinglePortMllpSender --extends ~.model.Hl7ConnectorSinglePortMllp
+entity jpa --class ~.model.Hl7ConnectorDualPortMllpReceiver --extends ~.model.Hl7ConnectorDualPortMllp
+entity jpa --class ~.model.Hl7ConnectorDualPortMllpSender --extends ~.model.Hl7ConnectorDualPortMllp
