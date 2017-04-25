@@ -18,13 +18,8 @@ branches:
 services:
   - docker
 
-script:
-  - 'if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then bash mvn clean verify; fi'
-  - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash mvn clean verify docker:build; fi'
-  - 'if [ "$TRAVIS_BRANCH" = "master" ]; then bash mvn org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar; fi'
-
-after_success: mvn
-   - 'if [ "$TRAVIS_PULL_REQUEST" = "false" ]; then bash docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD" && mvn docker:push; fi'
+script: mvn org.jacoco:jacoco-maven-plugin:prepare-agent verify sonar:sonar docker:build
+after_success: docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD" && mvn docker:push
 
 notifications:
   hipchat: $HIPCHAT_TOKEN@$HIPCHAT_ROOM_ID
