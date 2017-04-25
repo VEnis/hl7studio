@@ -1,0 +1,25 @@
+addons:
+  sonarqube:
+    organization: "venis-github"
+    token: $SONAR_TOKEN
+
+language: java
+sudo: true
+install: true
+jdk:
+  - oraclejdk8
+cache:
+  directories:
+  - '$HOME/.m2'
+  - '$HOME/.sonar/cache'
+branches:
+  only:
+  - master
+services:
+  - docker
+
+script: mvn org.jacoco:jacoco-maven-plugin:prepare-agent verify sonar:sonar docker:build
+after_success: docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD" && mvn docker:push
+
+notifications:
+  hipchat: $HIPCHAT_TOKEN@$HIPCHAT_ROOM_ID
