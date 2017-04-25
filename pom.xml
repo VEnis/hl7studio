@@ -53,6 +53,7 @@
     <respond.version>1.4.2</respond.version>
     <html5shiv.version>3.7.3</html5shiv.version>
     <bootstrap.ie10-viewport-bug-workaround.version>1.0.3</bootstrap.ie10-viewport-bug-workaround.version>
+      <docker-maven-plugin.version>0.20.1</docker-maven-plugin.version>
     </properties>
 
   <repositories>
@@ -314,12 +315,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
-            <scope>provided</scope>
+            <!--<scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>org.hsqldb</groupId>
             <artifactId>hsqldb</artifactId>
-            <scope>provided</scope>
+            <!--<scope>provided</scope>-->
         </dependency>
     <dependency>
             <groupId>io.springlets</groupId>
@@ -638,6 +639,35 @@
                 <groupId>com.mysema.maven</groupId>
                 <artifactId>apt-maven-plugin</artifactId>
             </plugin>
+        <plugin>
+            <groupId>io.fabric8</groupId>
+            <artifactId>docker-maven-plugin</artifactId>
+            <version>${docker-maven-plugin.version}</version>
+            <configuration>
+                <images>
+                    <image>
+                        <name>venis/%a</name>
+                        <build>
+                            <from>fabric8/java-alpine-openjdk8-jre:1.2</from>
+                            <tags>
+                                <tag>latest</tag>
+                                <tag>${project.version}</tag>
+                            </tags>
+                            <ports>
+                                <port>8080</port>
+                            </ports>
+                            <assembly>
+                                <descriptorRef>artifact-with-dependencies</descriptorRef>
+                            </assembly>
+                            <env>
+                                <JAVA_APP_DIR>/maven</JAVA_APP_DIR>
+                                <JAVA_MAIN_CLASS>io.github.venis.hl7studio.Hl7studioApplication</JAVA_MAIN_CLASS>
+                            </env>
+                        </build>
+                    </image>
+                </images>
+            </configuration>
+        </plugin>
         </plugins>
   </build>
 
